@@ -8,8 +8,8 @@ public class PizzaConfigurationTest extends TestBase{
     public void testAllPositionInConstructor(){
 
         openURL();
-        closeAlertAndNavigatePosition();
-        makeCustomPizzaAndAddToCart();
+        app.information().closeAlertAndNavigatePosition();
+        app.pizza().makeCustomPizzaAndAddToCart();
 
     }
 }

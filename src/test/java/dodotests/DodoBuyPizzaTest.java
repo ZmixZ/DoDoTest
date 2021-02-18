@@ -13,15 +13,16 @@ public class DodoBuyPizzaTest extends TestBase{
     public void buyPizza() throws IOException {
 
         openURL();
-        closeAlertAndNavigatePosition();
-        makeCustomPizzaAndAddToCart();
-        makeRegularPizzaAndAddToCart();
-        clickTextElement("Корзина");
-        List<PizzaModel> pizza = getPizzaModels();
-        savePizzaModelsInFile(pizza);
-        clickTextElement("Оформить заказ");
-        fillContactAndDeliveryForm();
-        clickTextElement("Оформить заказ на");
+        app.information().closeAlertAndNavigatePosition();
+        app.pizza().makeCustomPizzaAndAddToCart();
+        app.pizza().makeRegularPizzaAndAddToCart();
+        app.information().clickTextElement("Корзина");
+        List<PizzaModel> pizza = app.pizza().getPizzaModels();
+        app.pizza().savePizzaModelsInFile(pizza);
+        app.information().clickTextElement("Оформить заказ");
+        authorization();
+        app.information().fillContactAndDeliveryForm();
+        app.information().clickTextElement("Оформить заказ на");
 
     }
 
