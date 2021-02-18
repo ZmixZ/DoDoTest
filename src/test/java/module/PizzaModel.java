@@ -1,4 +1,4 @@
-package dodotests;
+package module;
 
 import java.util.Objects;
 
