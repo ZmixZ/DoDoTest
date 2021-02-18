@@ -1,11 +1,9 @@
-package dodotests;
+package tests;
 
 
-import module.PizzaModel;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.List;
 
 public class DodoBuyPizzaTest extends TestBase{
 

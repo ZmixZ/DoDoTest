@@ -1,4 +1,4 @@
-package dodotests;
+package tests;
 
 import appmanager.ApplicationManager;
 
