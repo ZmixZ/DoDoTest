@@ -14,6 +14,7 @@ public class TestBase {
     public void authorization() {
         app.information().fillElement("phn-input", "----------");
         app.information().clickTextElement("Выслать код");
+        //доделать смс-пароль и капчу-скип
     }
 
     public ApplicationManager getApp() {
