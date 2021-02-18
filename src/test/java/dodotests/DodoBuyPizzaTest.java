@@ -17,12 +17,10 @@ public class DodoBuyPizzaTest extends TestBase{
         app.pizza().makeCustomPizzaAndAddToCart();
         app.pizza().makeRegularPizzaAndAddToCart();
         app.information().clickTextElement("Корзина");
-        List<PizzaModel> pizza = app.pizza().getPizzaModels();
-        app.pizza().savePizzaModelsInFile(pizza);
+        app.pizza().savePizzaModelsInFile();
         app.information().clickTextElement("Оформить заказ");
         authorization();
         app.information().fillContactAndDeliveryForm();
-        app.information().clickElement("button.sc-91ilwk-0.hmteXa.sc-1fb8x0h-1.kxjUMr");
 
     }
 

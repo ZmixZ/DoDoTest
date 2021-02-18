@@ -17,7 +17,8 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class PizzaHelper extends HelperBase{
 
-    public void savePizzaModelsInFile(List<PizzaModel> pizza) throws IOException {
+    public void savePizzaModelsInFile() throws IOException {
+        List<PizzaModel> pizza = getPizzaModels();
         File file = new File("src/test/resources/pizzaincart.json");
         Gson gson = new GsonBuilder().setPrettyPrinting().create(); //Сделать лист из двух пицц и их добавить в джейсон
         String json = gson.toJson(pizza);

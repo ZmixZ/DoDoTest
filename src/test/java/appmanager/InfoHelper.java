@@ -11,6 +11,7 @@ public class InfoHelper extends HelperBase{
         clickElement("div.input-container a");
         clickTextElement("11:30");
         clickTextElement("Наличными");
+        clickElement("button.sc-91ilwk-0.hmteXa.sc-1fb8x0h-1.kxjUMr");
     }
 
     public void closeAlertAndNavigatePosition() {
@@ -24,5 +25,11 @@ public class InfoHelper extends HelperBase{
             i.click();
             clickElement("button.sc-91ilwk-0.hmteXa.qqq9ws-3.dDwhHZ");
         }
+    }
+
+    public void orderAndAdditionsAddStep(){
+        clickTextElement("Корзина");
+        additionsAdd();
+        clickTextElement("Оформить заказ");
     }
 }

@@ -10,9 +10,7 @@ public class CartAdditionsTest extends TestBase{
         openURL();
         app.information().closeAlertAndNavigatePosition();
         app.pizza().clickAndConfigPizza();
-        app.information().clickTextElement("Корзина");
-        app.information().additionsAdd();
-        app.information().clickTextElement("Оформить заказ");
+        app.information().orderAndAdditionsAddStep();
 
     }
 
