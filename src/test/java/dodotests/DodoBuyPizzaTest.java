@@ -22,7 +22,7 @@ public class DodoBuyPizzaTest extends TestBase{
         app.information().clickTextElement("Оформить заказ");
         authorization();
         app.information().fillContactAndDeliveryForm();
-        app.information().clickTextElement("Оформить заказ на");
+        app.information().clickElement("button.sc-91ilwk-0.hmteXa.sc-1fb8x0h-1.kxjUMr");
 
     }
 

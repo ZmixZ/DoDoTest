@@ -66,6 +66,7 @@ public class PizzaHelper extends HelperBase{
         clickElement("div.sc-6x49ya-2.vKshE:nth-child(9)");
         clickElement("div.sc-6x49ya-2.vKshE:nth-child(10)");
         clickElement("label.z6jeag-2.eMiiQc");
+        clickTextElement("Тонкое");
         clickElement("div.sc-1aajm7d-15.iwTQYS");
     }
 

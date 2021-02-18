@@ -15,7 +15,7 @@ public class InfoHelper extends HelperBase{
 
     public void closeAlertAndNavigatePosition() {
         clickElement("span button.cookie-policy__button");
-        clickElement("li.ymp2tw-2.hfBzCp:nth-child(1)");
+        clickTextElement("Пицца");
     }
 
     public void additionsAdd() {
