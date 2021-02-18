@@ -20,7 +20,7 @@ public class PizzaHelper extends HelperBase{
     public void savePizzaModelsInFile() throws IOException {
         List<PizzaModel> pizza = getPizzaModels();
         File file = new File("src/test/resources/pizzaincart.json");
-        Gson gson = new GsonBuilder().setPrettyPrinting().create(); //Сделать лист из двух пицц и их добавить в джейсон
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(pizza);
         Writer writer = new FileWriter(file);
         writer.write(json);

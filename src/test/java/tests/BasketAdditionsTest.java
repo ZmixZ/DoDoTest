@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-public class CartAdditionsTest extends TestBase{
+public class BasketAdditionsTest extends TestBase{
 
     @Test
     public void cartTest(){
