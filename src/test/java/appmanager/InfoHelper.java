@@ -1,10 +1,16 @@
 package appmanager;
 
 import com.codeborne.selenide.SelenideElement;
+import java.io.IOException;
 import java.util.List;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class InfoHelper extends HelperBase{
+    ApplicationManager app;
+
+    public InfoHelper(ApplicationManager app){
+        this.app = app;
+    }
 
     public void fillContactAndDeliveryForm() {
         fillElement("nm-input", "Рофлан Петрович");
@@ -30,6 +36,12 @@ public class InfoHelper extends HelperBase{
     public void orderAndAdditionsAddStep(){
         clickTextElement("Корзина");
         additionsAdd();
+        clickTextElement("Оформить заказ");
+    }
+
+    public void ordering() throws IOException {
+        clickTextElement("Корзина");
+        app.pizza().savePizzaModelsInFile();
         clickTextElement("Оформить заказ");
     }
 }

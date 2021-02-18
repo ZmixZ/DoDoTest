@@ -2,7 +2,6 @@ package tests;
 
 
 import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 
 public class DodoBuyPizzaTest extends TestBase{
@@ -14,9 +13,7 @@ public class DodoBuyPizzaTest extends TestBase{
         app.information().closeAlertAndNavigatePosition();
         app.pizza().makeCustomPizzaAndAddToCart();
         app.pizza().makeRegularPizzaAndAddToCart();
-        app.information().clickTextElement("Корзина");
-        app.pizza().savePizzaModelsInFile();
-        app.information().clickTextElement("Оформить заказ");
+        app.information().ordering();
         authorization();
         app.information().fillContactAndDeliveryForm();
 
