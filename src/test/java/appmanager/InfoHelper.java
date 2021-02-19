@@ -39,7 +39,7 @@ public class InfoHelper extends HelperBase{
         }
     }
 
-    public void orderAndAdditionsAddStep(){
+    public void orderAndAdditionsAdd(){
         clickTextElement("Корзина");
         additionsAdd();
         clickTextElement("Оформить заказ");

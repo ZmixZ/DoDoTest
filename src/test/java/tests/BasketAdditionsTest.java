@@ -10,7 +10,7 @@ public class BasketAdditionsTest extends TestBase{
         openURL();
         app.information().closeAlertAndNavigatePosition();
         app.pizza().clickAndConfigPizza();
-        app.information().orderAndAdditionsAddStep();
+        app.information().orderAndAdditionsAdd();
 
     }
 
