@@ -3,7 +3,10 @@ package appmanager;
 import com.codeborne.selenide.SelenideElement;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -15,20 +18,20 @@ public class InfoHelper extends HelperBase{
     }
 
     public void fillContactAndDeliveryForm() {
-        fillElement("nm-input", "Рофлан Петрович");
+        fillElement(byId("nm-input"), "Рофлан Петрович");
         clickElement("div.input-container a");
-        clickTextElement("11:30");
-        clickTextElement("Наличными");
+        clickByElement(byText("11:30"));
+        clickByElement(byText("Наличными"));
         clickElement("button.sc-91ilwk-0.hmteXa.sc-1fb8x0h-1.kxjUMr");
     }
 
     public void closeAlertAndNavigatePosition() {
         if($("span.cookie-policy__container").exists()){
             clickElement("span button.cookie-policy__button");
-            clickTextElement("Пицца");
+            clickByElement(byText("Пицца"));
         }
         else
-        clickTextElement("Пицца");
+        clickByElement(byText("Пицца"));
     }
 
     public void additionsAdd() {
@@ -40,14 +43,14 @@ public class InfoHelper extends HelperBase{
     }
 
     public void orderAndAdditionsAdd(){
-        clickTextElement("Корзина");
+        clickByElement(byText("Корзина"));
         additionsAdd();
-        clickTextElement("Оформить заказ");
+        clickByElement(byText("Оформить заказ"));
     }
 
     public void ordering() throws IOException {
-        clickTextElement("Корзина");
+        clickByElement(byText("Корзина"));
         app.pizza().savePizzaModelsInFile();
-        clickTextElement("Оформить заказ");
+        clickByElement(byText("Оформить заказ"));
     }
 }

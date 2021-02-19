@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -29,7 +31,6 @@ public class PizzaHelper extends HelperBase{
 
     public List<PizzaModel> getPizzaModels() {
         List<PizzaModel> pizza = new ArrayList<>();
-
         SelenideElement firstPizza =  $("article.sc-157hvfs-0.jxUdnj:nth-child(2)");
         String name1 = firstPizza.$("h3.sc-157hvfs-3.hHqyE").getText();
         String parameter1 = firstPizza.$("div.sc-157hvfs-4.kpTbhD div").getText();
@@ -67,7 +68,7 @@ public class PizzaHelper extends HelperBase{
         clickElement("div.sc-6x49ya-2.vKshE:nth-child(9)");
         clickElement("div.sc-6x49ya-2.vKshE:nth-child(10)");
         clickElement("label.z6jeag-2.eMiiQc");
-        clickTextElement("Тонкое");
+        clickByElement(byText("Тонкое"));
         clickElement("div.sc-1aajm7d-15.iwTQYS");
     }
 

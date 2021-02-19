@@ -2,6 +2,8 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class PizzaConfigurationTest extends TestBase{
 
     @Test
@@ -10,6 +12,7 @@ public class PizzaConfigurationTest extends TestBase{
         openURL();
         app.information().closeAlertAndNavigatePosition();
         app.pizza().makeCustomPizzaAndAddToCart();
+        closeWebDriver();
 
     }
 }

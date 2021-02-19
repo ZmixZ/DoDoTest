@@ -2,6 +2,8 @@ package tests;
 
 import appmanager.ApplicationManager;
 
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
@@ -12,8 +14,8 @@ public class TestBase {
     }
 
     public void authorization() {
-        app.information().fillElement("phn-input", "----------");
-        app.information().clickTextElement("Выслать код");
+        app.information().fillElement(byId("phn-input"), "----------");
+        app.information().clickByElement(byText("Выслать код"));
         //доделать смс-пароль и капчу-скип
     }
 
