@@ -3,6 +3,8 @@ package appmanager;
 import com.codeborne.selenide.SelenideElement;
 import java.io.IOException;
 import java.util.List;
+
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class InfoHelper extends HelperBase{
@@ -21,7 +23,11 @@ public class InfoHelper extends HelperBase{
     }
 
     public void closeAlertAndNavigatePosition() {
-        clickElement("span button.cookie-policy__button");
+        if($("span.cookie-policy__container").exists()){
+            clickElement("span button.cookie-policy__button");
+            clickTextElement("Пицца");
+        }
+        else
         clickTextElement("Пицца");
     }
 
